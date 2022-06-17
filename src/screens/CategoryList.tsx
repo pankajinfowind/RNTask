@@ -139,7 +139,7 @@ const CategoryList = () => {
         let allCategory = [...mainData]
         console.log('all data is a = ', allCategory)
         let filter_data = mainData.filter((cat) => {
-            let name = cat.name[0].value.toUpperCase()
+            let name = cat.type === 'custom' ? cat.nameEng : cat.name[0].value.toUpperCase()
             let searchText = text.toUpperCase()
             console.log('filter data is = ', name, searchText)
             return name.includes(searchText)
